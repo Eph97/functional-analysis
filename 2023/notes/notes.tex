@@ -1,0 +1,86 @@
+\documentclass{lnotes}
+\usepackage{amsfonts}
+\usepackage[mathscr]{euscript}
+
+% Bibliography
+\usepackage[style = alphabetic]{biblatex}
+\addbibresource{references.bib}
+
+% Packages
+\usepackage{epigraph}
+\usepackage[osf]{libertineRoman}
+\usepackage{biolinum} % nice sans serif font
+\usepackage{ulem} % for strikethrough text
+\usepackage{outlines}
+% \usepackage{tikz-cd}
+% \usepackage{dsfont}
+% \newcommand{\1}{\mathds{1}}
+\newcommand{\B}{\mathcal{B}}
+% \usepackage{wasysym}
+
+% Enumitem environment
+\newlist{steps}{enumerate}{1}
+\setlist[steps, 1]{leftmargin=1.5cm, label = Step \arabic*:}
+
+% Commands
+\newcommand{\contains}{\supseteq}
+\newcommand{\ts}{\textsuperscript}
+
+% Operators
+\DeclareMathOperator*{\diam}{diam}
+\DeclareMathOperator*{\osc}{osc}
+
+% Change equation numbering style
+\numberwithin{equation}{section}
+
+% Document Information
+\title{Functional Analysis}
+\course{\textsc{MATH} 325}
+\place{Yale University} \term{Spring} \year{2023}
+
+\blurb{
+	These are lecture notes for \textsc{math} 325, ``Functional Analysis'' taught by Wilhelm Schlag at Yale University during the Spring of 2023.
+	These notes are not official, and have not been proofread by the instructor for the course.
+	These notes live in my lecture notes respository at
+	\[\text{\url{https://github.com/Eph97/Math325}.}\]
+	If you find any errors, please open a bug report describing the error, and label it with the course identifier, or open a pull request so I can correct it.
+}
+
+\begin{document}
+
+\section*{Syllabus}
+
+\begin{center}
+\begin{tabular}{@{}rp{10cm}@{}}
+\toprule
+\textbf{Instructor} &  Prof. Wilhelm Schlag, \url{charlie.smart@yale.edu} \\
+\textbf{Lecture} & MW 1:00 \textsc{am}--2:15 \textsc{pm}, Humanities Quadrangle 207 \\
+% \textbf{OH} & M 1:00 \textsc{pm}--3:00 \textsc{pm}, Dunham Lab 450 \\
+% \textbf{Recitation} & TBA \\
+\textbf{Textbook} & \fullcite{Luenberger} \\
+% \textbf{Midterms} & Mon Oct 3, 2023 (In-Class) \\
+% 				  & Mon Nov 7, 2023 (In-Class) \\
+% \textbf{Final} & Tue Dec 20, 2023 at 2pm (Location: TBD) \\
+\bottomrule
+\end{tabular} \\[3ex]
+\end{center}
+
+\subsection*{Course Description}
+This course will provide a comprehensive introduction to Functional Analysis.  We will start from real analysis and build from there.  The following topics will be covered.
+\begin{itemize}
+  \item Hilbert Spaces
+\end{itemize}
+
+\subsection*{Course Format}
+Approximately 2/3 of the material with be presented in lectures while the remaining 1/3 will be covered in the weekly homework assignments.
+
+\subsection*{Prerequisites}
+Math 305 or equivalent.
+
+\subsection*{Assessments and Grading}
+There will be ten homework assignments, two in-class midterms, and an in-person final, comprising 30\%, 40\%, and 30\%, respectively, of the total grade.
+
+\include{class_notes/01}
+\include{class_notes/07}
+
+\end{document}
